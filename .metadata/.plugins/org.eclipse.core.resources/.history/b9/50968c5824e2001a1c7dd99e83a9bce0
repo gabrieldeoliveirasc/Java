@@ -1,0 +1,19 @@
+package atividade01;
+
+import javax.swing.JOptionPane;
+
+public class Produto {
+
+	String nome;
+	double valor;
+	
+	// Método desconto
+	double  calculoDesconto() {
+		return valor >= 100 ? valor * 0.9 : valor * 1;
+	}
+	
+	// Método de mensagem
+	void mensagem() {
+		JOptionPane.showMessageDialog(null, "O "+nome+" custará "+calculoDesconto());
+	}
+}

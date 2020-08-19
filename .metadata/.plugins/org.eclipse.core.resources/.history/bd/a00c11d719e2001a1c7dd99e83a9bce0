@@ -1,0 +1,26 @@
+package exemplo02;
+
+import javax.swing.JOptionPane;
+
+public class Aluno {
+
+	// Atributos
+	String nome;
+	double nota01, nota02;
+	
+	// Método de média
+	double calculoMedia() {
+		return (nota01+nota02)/2;
+	}
+	
+	//Método de situação
+	String situação() {
+		return calculoMedia() >= 7 ? "Aprovado" : "Reprovado";
+	}
+	
+	// Método de mensagem
+	void mensagem() {
+		JOptionPane.showMessageDialog(null, situação()+" com media "+calculoMedia());
+	}
+	
+}
